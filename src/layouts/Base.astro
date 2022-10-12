@@ -1,0 +1,39 @@
+---
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/900.css';
+import '@fontsource/inter/700.css';
+
+export interface Props {
+    title?: string;
+    description?: string;
+};
+
+const { title = '🪴 Berry Family House Plants 🪴', description = '' } = Astro.props as Props;
+---
+
+<html lang="en">
+    <head>
+        <title>{title}</title>
+        <meta name="description" content={description}>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#22C55E">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Berry Family House Plants">
+        <meta property="og:title" content={title}>
+        <meta property="og:description" content={description}>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.png"/>
+    </head>
+    <main role="main">
+        <slot/>
+    </main>
+</html>
+<style>
+    html,
+    body,
+    * {
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+    }
+</style>
