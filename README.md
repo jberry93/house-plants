@@ -1,2 +1,2 @@
 # house-plants
-A guide on the plants we have planted around the house
+A guide on the plants we planted around the house
